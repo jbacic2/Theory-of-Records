@@ -9,7 +9,7 @@ The theory of records answers the question:
 The theory of records states that this is the <code>n</code><sup>th</sup> [harmonic number](https://en.wikipedia.org/wiki/Harmonic_number), <code>H<sub>n</sub> = sum(1/i), i = 1, ..., n</code>
 
 # Formal Definition and Analysis 
-We are given a sequence of `n` independent and identically distributed random variables, <code>a<sub>1</sub>,a<sub>2</sub>,..., a<sub>n</sub></code>. The value <code>a<sub>i</sub></code> is a minimum record if <code>a<sub>i</sub> < a<sub>j</sub></code> for <code>j</code> in <code>{1,...,i-1}</code>. 
+We are given a sequence of `n` independent and identically distributed random variables, <code>a<sub>1</sub>,a<sub>2</sub>,..., a<sub>n</sub></code>. The value <code>a<sub>i</sub></code> is a minimum record if <code>a<sub>i</sub> < a<sub>j</sub></code> for all <code>j = 1,...,i-1</code>. 
 
 # Applications
 
