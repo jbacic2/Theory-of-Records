@@ -10,6 +10,14 @@ The theory of records states that this is the <code>n</code><sup>th</sup> [harmo
 # Formal Definition and Analysis 
 For a sequence of `n` independent and identically distributed random variables, with a given density<code>a<sub>1</sub>,a<sub>2</sub>,..., a<sub>n</sub></code>. The value <code>a<sub>i</sub></code> is a minimum record if <code>a<sub>i</sub> < a<sub>j</sub></code> for all <code>j = 1,...,i-1</code>. 
 
+## Ranks 
+For each `i = 1, …, n`, the rank <code>r<sub>i</sub></code> is defined to be the value such that <code>a<sub>i</sub></code> is the <code>r<sub>i</sub></code>th smallest value of the set <code>{a<sub>1</sub>,a<sub>2</sub>,..., a<sub>n</sub>}</code>. When using random variables with density functions, the probability that `a<sub>i</sub> = a<sub>j</sub>` is 0. Thus, the  rank sequence, <code>r<sub>1</sub>,..., a<sub>r</sub></code>, is a permutation of `{1, …, n}`. Furthermore, since each <code>a<sub>i</sub></code> is chosen independently from the same distribution, each permutation is equally likely. Thus, the probability that the rank sequence is a given permutation of `{1, …, n} is `1/n!`. 
+
+The value <code>a<sub>i</sub></code> is a record in the sequence <code>a<sub>1</sub>,..., a<sub>n</sub></code> if and only if <code>r<sub>i</sub></code> is a record in the sequence <code>r<sub>1</sub>,..., r<sub>n</sub></code>. Thus counting the number of records in <code>a<sub>1</sub>,..., a<sub>n</sub></code> is equlavelnt ot counting the number of records in <code>r<sub>1</sub>,..., r<sub>n</sub></code>.
+
+## Expected Number of Records
+
+
 # Applications
 
 The theory of records has proven to have many applications in probabilistic analysis. 
