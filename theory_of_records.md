@@ -22,11 +22,14 @@ Let the random variable `X` denote the number of records in the sequence <code>a
 
 Define the indicator random variable <code>I<sub>i</sub></code>. To be 1 if <code>a<sub>i</sub></code> is a record and 0 otherwise. Then,
 <code>X = sum(<code>I<sub>i</sub></code>) for  i = 1, ..., n</code>
-And thus,
-<code>E[X] = E[sum(I<sub>i</sub>)] for  i = 1, ..., n</code>
-<code>= sum(E[I<sub>i</sub>]) for  i = 1, ..., n</code> by the linearity of expectation. 
+And thus, <br />
+<code>E[X] = E[sum(I<sub>i</sub>)] for  i = 1, ..., n = sum(E[I<sub>i</sub>]) for  i = 1, ..., n</code> by the linearity of expectation. 
 
-Consider <code>E[I<sub>i</sub>]</code>. 
+Consider <code>E[I<sub>i</sub>]</code>. <br />
+<code>E[I<sub>i</sub>] = 0*Pr(I<sub>i</sub> = 0) + 1*Pr(I<sub>i</sub> = 1) = Pr(I<sub>i</sub> = 1)</code> <br />
+Since <code>I<sub>i</sub> = 1</code> if and only if <code>r<sub>i</sub></code> is a record, 
+<code>E[I<sub>i</sub>] = Pr(r<sub>i</sub> is a record)</code>.
+
 
 
 ## Applications
