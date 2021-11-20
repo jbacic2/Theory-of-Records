@@ -18,9 +18,10 @@ For each `i = 1, …, n`, the rank <code>r<sub>i</sub></code> is defined to be t
 The value <code>a<sub>i</sub></code> is a record in the sequence <code>a<sub>1</sub>,..., a<sub>n</sub></code> if and only if <code>r<sub>i</sub></code> is a record in the sequence <code>r<sub>1</sub>,..., r<sub>n</sub></code>. Thus counting the number of records in <code>a<sub>1</sub>,..., a<sub>n</sub></code> is equivalent to counting the number of records in <code>r<sub>1</sub>,..., r<sub>n</sub></code>.
 
 ### Expected Number of Records
-Let the random variable `X` denote the number of records in the sequence <code>a<sub>1</sub>,..., a<sub>n</sub></code> and `E(X)` denote the expected value of `X`. From the previous section, `E(X)` is equal to the number of records of the sequence <code>r<sub>1</sub>,..., r<sub>n</sub></code> where <code>r<sub>i</sub> is the rank of <code>a<sub>i</sub> for `i = 1, …, n`.  
+Let the random variable `X` denote the number of records in the sequence <code>a<sub>1</sub>,..., a<sub>n</sub></code> and `E(X)` denote the expected value of `X`. From the previous section, `E(X)` is equal to the number of records of the sequence <code>r<sub>1</sub>,..., r<sub>n</sub></code> where <code>r<sub>i</sub></code> is the rank of <code>a<sub>i</sub></code> for `i = 1, …, n`. 
 
-Define the indicator random variable <code>I<sub>i</sub>. To be 1 if <code>a<sub>i</sub> is a record and 0 otherwise. 
+Define the indicator random variable <code>I<sub>i</sub></code>. To be 1 if <code>a<sub>i</sub></code> is a record and 0 otherwise.
+
 
 
 ## Applications
