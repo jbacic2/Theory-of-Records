@@ -30,8 +30,9 @@ Consider <code>E[I<sub>i</sub>]</code>.
 Since <code>I<sub>i</sub> = 1</code> if and only if <code>r<sub>i</sub></code> is a record, 
 <code>E[I<sub>i</sub>] = Pr(r<sub>i</sub> is a record)</code>. By definition of a record, 
 <code>Pr(r<sub>i</sub> is a record)= Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>))</code>. 
-Note that the set <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code> contains `i` unique values and is a uniformly random permutation of these values. Thus the smallest value of this set occurs with equal probability at each location. Thus <code>Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>))=1/i</code>. 
+Note that the set <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code> contains `i` unique values and is a uniformly random permutation of these values. Thus the smallest value of this set occurs with equal probability at each location. Thus <code>Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>| {r<sub>1</sub>, …, r<sub>i</sub>} are the first i values)=1/i</code>. Since each setsubset of `{1,..,n}` of size `i` has equal probability if being the subset `{r<sub>1</sub>, …, r<sub>i</sub>}`,  <code>Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>) = sum Pr({r<sub>1</sub>, …, r<sub>i</sub>}={s_1,...,s_n})\*Pr( {r<sub>1</sub>, …, r<sub>i</sub>} are the first i values)=1/i</code>. Therefore  <code>E[I<sub>i</sub>]=1/i</code>.
 
+So <code>E[X]= sum(E[I<sub>i</sub>]) for  i = 1, ..., n</code> = sum(1/i) for  i = 1, ..., n = H<sub>n</sub></code> where <code>H<sub>n</sub></code> denotes the `n`th harmonic number. 
 
 
 ## Applications
