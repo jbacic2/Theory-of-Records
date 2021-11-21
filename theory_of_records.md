@@ -25,10 +25,12 @@ Define the indicator random variable <code>I<sub>i</sub></code>. To be 1 if <cod
 And thus, <br />
 <code>E[X] = E[sum(I<sub>i</sub>)] for  i = 1, ..., n = sum(E[I<sub>i</sub>]) for  i = 1, ..., n</code> by the linearity of expectation. 
 
-Consider <code>E[I<sub>i</sub>]</code>. <br />
-<code>E[I<sub>i</sub>] = 0\*Pr(I<sub>i</sub> = 0) + 1\*Pr(I<sub>i</sub> = 1) = Pr(I<sub>i</sub> = 1)</code> <br />
+Consider <code>E[I<sub>i</sub>]</code>.
+<code>E[I<sub>i</sub>] = 0\*Pr(I<sub>i</sub> = 0) + 1\*Pr(I<sub>i</sub> = 1) = Pr(I<sub>i</sub> = 1)</code>. 
 Since <code>I<sub>i</sub> = 1</code> if and only if <code>r<sub>i</sub></code> is a record, 
-<code>E[I<sub>i</sub>] = Pr(r<sub>i</sub> is a record)</code>.
+<code>E[I<sub>i</sub>] = Pr(r<sub>i</sub> is a record)</code>. By definition of a record, 
+<code>Pr(r<sub>i</sub> is a record)= Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>))</code>. 
+Note that the set <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code> contains `i` unique values and is a uniformly random permutation of these values. Thus the smallest value of this set occurs with equal probability at each location. Thus <code>Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>))=1/i</code>. 
 
 
 
