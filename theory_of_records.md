@@ -30,10 +30,10 @@ Consider <code>E[I<sub>i</sub>]</code>.
 Since <code>I<sub>i</sub> = 1</code> if and only if <code>r<sub>i</sub></code> is a record, 
 <code>E[I<sub>i</sub>] = Pr(r<sub>i</sub> is a record)</code>. By definition of a record, 
 <code>Pr(r<sub>i</sub> is a record)= Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>))</code>. 
-Note that the set <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code> contains `i` unique values and is a uniformly random permutation of these values. Thus the smallest value of this set occurs with equal probability at each location. Thus <code>Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>| {r<sub>1</sub>, …, r<sub>i</sub>} are the first i values)=1/i</code>. Since each setsubset of `{1,..,n}` of size `i` has equal probability if being the subset `{r<sub>1</sub>, …, r<sub>i</sub>}`,  <code>Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>) = sum Pr({r<sub>1</sub>, …, r<sub>i</sub>}={s_1,...,s_n})\*Pr( {r<sub>1</sub>, …, r<sub>i</sub>} are the first i values)=1/i</code>. Therefore  <code>E[I<sub>i</sub>]=1/i</code>.
+Note that the set <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code> contains `i` unique values and is a uniformly random permutation of these values. Furthermore, each subset of `{1,...,n}` having size `i` has equal probability of being the subset <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code>. Consider the ranks of <code>r<sub>1</sub>, …, r<sub>i</sub></code> and call them <code>l<sub>1</sub>, …, l<sub>i</sub></code> such that <code>r<sub>j</sub> is the <code>l<sub>j</sub> smallest element of <code>{r<sub>1</sub>, …, r<sub>i</sub>}</code>. Then the sequence <code>l<sub>1</sub>, …, l<sub>i</sub></code> is a uniformy random permutation of `{1,...,n}`. 
+Pr(r<sub>i</sub>= min(r<sub>1</sub>, …, r<sub>i</sub>)) = Pr(l<sub>i</sub> = 1)</code>. The value `1` occurs at each location of the sequence with equal probability so <code> Pr(l<sub>i</sub> = 1)=1/i</code>. Therefore  <code>E[I<sub>i</sub>]=1/i</code>.
 
 So <code>E[X]= sum(E[I<sub>i</sub>]) for  i = 1, ..., n</code> = sum(1/i) for  i = 1, ..., n = H<sub>n</sub></code> where <code>H<sub>n</sub></code> denotes the `n`th harmonic number. 
-
 
 ## Applications
 
