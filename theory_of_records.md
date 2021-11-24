@@ -7,7 +7,7 @@ The theory of records answers the question:
 >  For a sequence of `n` values, what is the [expected](https://en.wikipedia.org/wiki/Expected_value) number of records?
 When the sequence comes from a permutation of `{1,...,n}` chosen uniformly at random or where the `n` values are [independent and identically distributed random variables](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) with a given [probability density function](https://en.wikipedia.org/wiki/Probability_density_function)
 
-The theory of records states that the expected number of records is the <code>n</code><sup>th</sup> [harmonic number](https://en.wikipedia.org/wiki/Harmonic_number), <code>H<sub>n</sub> = sum(1/i) for  i = 1, ..., n</code>. 
+The theory of records states that the expected number of records is the <code>n</code><sup>th</sup> [harmonic number](https://en.wikipedia.org/wiki/Harmonic_number), <code>H<sub>n</sub> = sum(1/i) i:1, ..., n</code>. 
 
 ## Formal Definition and Analysis 
 For a sequence of `n` independent and identically distributed random variables, with a given density <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code>. The value <code>A<sub>i</sub></code> is a minimum record if <code>A<sub>i</sub> < A<sub>j</sub></code> for all <code>j = 1,...,i-1</code>. 
@@ -30,27 +30,26 @@ Thus <code>R<sub>1</sub>,R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually i
 Let the random variable `X` denote the number of records in the sequence <code>A<sub>1</sub>,..., A<sub>n</sub></code> and `E[X]` denote the expected value of `X`. 
 
 Define the indicator random variable <code>I<sub>i</sub></code>. To be 1 if <code>A<sub>i</sub></code> is a record and 0 otherwise. Then,
-<code>X = sum(I<sub>i</sub>) for  i = 1, ..., n</code>
+<code>X = sum(I<sub>i</sub>) i:1, ..., n</code>
 And thus, <br />
-<code>E[X] = E[sum(I<sub>i</sub>)] for  i = 1, ..., n = sum(E[I<sub>i</sub>]) for  i = 1, ..., n</code> by the linearity of expectation. 
+<code>E[X] = E[sum(I<sub>i</sub>)] i:1, ..., n = sum(E[I<sub>i</sub>]) i:1, ..., n</code> by the linearity of expectation. 
 
 Consider <code>E[I<sub>i</sub>]</code>.
 <code>E[I<sub>i</sub>] = 0\*Pr(I<sub>i</sub> = 0) + 1\*Pr(I<sub>i</sub> = 1) = Pr(I<sub>i</sub> = 1)</code>. 
 Since <code>I<sub>i</sub> = 1</code> if and only if <code>R<sub>i</sub> = 1</code>, 
 <code>E[I<sub>i</sub>] = Pr(R<sub>i</sub> = 1) = 1/i</code> from the previous section.
   
-So <code>E[X]= sum(E[I<sub>i</sub>]) for  i = 1, ..., n = sum(1/i) for  i = 1, ..., n = H<sub>n</sub></code> where <code>H<sub>n</sub></code> denotes the `n`th harmonic number. 
+So <code>E[X]= sum(E[I<sub>i</sub>]) i:1, ..., n = sum(1/i) i:1, ..., n = H<sub>n</sub></code> where <code>H<sub>n</sub></code> denotes the `n`th harmonic number. 
 
 ### Varience 
 Consider the indicator random variable <code>I<sub>i</sub></code> as defined in the last section. The value of <code>I<sub>i</sub></code> is determined by the value of <code>R<sub>i</sub></code> for `i = 1, ..., n`. Since <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independednt, <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent. 
 
-For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable which takes 1 with proability `p=1/i` and 0 with probaility `1-p=1=1/i`. Thus the variance of <code>I<sub>i</sub></code> is <code>Var(I<sub>i</sub>) = p(1-p) =(1/i)(1-1/i) = 1/i - 1/i<sup>2</sup></code>. Since <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent, and <code>X = sum(I<sub>i</sub>) for i = 1,...,n</code>:</br>
-<code>Var(X) = Var(sum(I<sub>i</sub>) for i = 1,...,n) = sum(Var(I<sub>i</sub>)) for i = 1,...,n >= sum(1/i - 1/i<sup>2</sup>) for i = 1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) for i = 1,...,n <= H<sub>n</sub></code>.
+For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable which takes 1 with proability `p=1/i` and 0 with probaility `1-p=1=1/i`. Thus the variance of <code>I<sub>i</sub></code> is <code>Var(I<sub>i</sub>) = p(1-p) =(1/i)(1-1/i) = 1/i - 1/i<sup>2</sup></code>. Since <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent, and <code>X = sum(I<sub>i</sub>) i:1,...,n</code>:</br>
+<code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) for i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n <= H<sub>n</sub></code>.
 
 ### Distribution
 Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality), `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:</br>
 <code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/a<sup>2</sup> H<sub>n</sub><sup>2</sup> = 1/a<sup>2</sup> H<sub>n</sub></code></br>
-<code>= sum(Var(I<sub>i</sub>)) for i = 1,...,n </code></br>
 
 
 ## Applications
