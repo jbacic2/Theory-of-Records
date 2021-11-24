@@ -45,7 +45,7 @@ So <code>E[X]= sum(E[I<sub>i</sub>]) i:1, ..., n = sum(1/i) i:1, ..., n = H<sub>
 Consider the indicator random variable <code>I<sub>i</sub></code> as defined in the last section. The value of <code>I<sub>i</sub></code> is determined by the value of <code>R<sub>i</sub></code> for `i = 1, ..., n`. Since <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independednt, <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent. 
 
 For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable which takes 1 with proability `p=1/i` and 0 with probaility `1-p=1=1/i`. Thus the variance of <code>I<sub>i</sub></code> is <code>Var(I<sub>i</sub>) = p(1-p) =(1/i)(1-1/i) = 1/i - 1/i<sup>2</sup></code>. Since <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent, and <code>X = sum(I<sub>i</sub>) i:1,...,n</code>:</br>
-<code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) for i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n <= H<sub>n</sub></code>.
+<code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n <= H<sub>n</sub></code>.
 
 ### Distribution
 Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality), `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:</br>
