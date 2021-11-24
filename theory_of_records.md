@@ -20,7 +20,7 @@ The *global rank* of <code>A<sub>i</sub></code> denoted <code>G<sub>i</sub></cod
 The local rank sequence <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> uniquly determines the global rank sequence. Given the local ranks, one can determine the arrangment of <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code> in increasing order by starting with an empty sequence add repeatedly adding `i` at postion <code>R<sub>i</sub></code> for `i = 1, ..., n`.
 The gobal rank <code>G<sub>i</sub></code> is determined by the index of `i` in the ordered sequence. This implies that given a tuple <code>(r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub>)</code> where <code>1 <= r<sub>i</sub> <= i</code>, <code>Pr(R<sub>1</sub> = r<sub>1</sub>,R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub>=r<sub>n</sub>)= 1/n!</code>.
 
-By summing over all cases where <code>R<sub>i</sub>=r<sub>i</sub></code>, <code>Pr(R<sub>n</sub> = r<sub>n</sub>) = 1/n for 1<= r<sub>n</sub> <= n</code> for all `n = 1, 2, ...`.
+By summing over all cases where <code>R<sub>n</sub>=r<sub>n</sub></code>, <code>Pr(R<sub>n</sub> = r<sub>n</sub>) = 1/n for 1<= r<sub>n</sub> <= n</code> for all `n = 1, 2, ...`.
   
 The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>n</sub></code>, <code>k=1,2,...</code>, and <code>n = 1, 2, ...</code>
 
@@ -40,6 +40,15 @@ Since <code>I<sub>i</sub> = 1</code> if and only if <code>R<sub>i</sub> = 1</cod
 <code>E[I<sub>i</sub>] = Pr(R<sub>i</sub> = 1) = 1/i</code> from the previous section.
   
 So <code>E[X]= sum(E[I<sub>i</sub>]) for  i = 1, ..., n = sum(1/i) for  i = 1, ..., n = H<sub>n</sub></code> where <code>H<sub>n</sub></code> denotes the `n`th harmonic number. 
+
+### Varience 
+Consider the indicator random variable <code>I<sub>i</sub></code> as defined in the last section. The value of <code>I<sub>i</sub></code> is determined by the value of <code>R<sub>i</sub></code> for `i = 1, ..., n`. Since <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independednt, <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent. 
+
+For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable which takes 1 with proability `p=1/i` and 0 with probaility `1-p=1=1/i`. Thus the variance of <code>I<sub>i</sub></code> is <code>Var(I<sub>i</sub>) = p(1-p) =(1/i)(1-1/i) = 1/i - 1/i<sup>2</sup></code>. Since <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent, and <code>X = sum(I<sub>i</sub>) for i = 1,...,n</code>, <code>Var(X) = Var(sum(I<sub>i</sub>) for i = 1,...,n) = sum(Var(I<sub>i</sub>)) for i = 1,...,n</code>. 
+
+### Distribution
+
+
 
 ## Applications
 
