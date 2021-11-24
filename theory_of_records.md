@@ -48,9 +48,9 @@ For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable whi
 <code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n <= H<sub>n</sub></code>.
 
 ### Distribution
-Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality), `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:</br>
-<code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/a<sup>2</sup> H<sub>n</sub><sup>2</sup> = 1/a<sup>2</sup> H<sub>n</sub></code></br>
-
+Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality), `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:
+<code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/(a<sup>2</sup> H<sub>n</sub><sup>2</sup>) = 1/(a<sup>2</sup> H<sub>n</sub>)</code> which goes to zero as `n` goes to infifnity. Thus with high probaility, `|X-E[X]|>= aE[X]` and thus 
+<code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code>.
 
 ## Applications
 
