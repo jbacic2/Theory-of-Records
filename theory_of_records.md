@@ -47,10 +47,11 @@ Consider the indicator random variable <code>I<sub>i</sub></code> as defined in 
 For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable which takes 1 with proability `p=1/i` and 0 with probaility `1-p=1=1/i`. Thus the variance of <code>I<sub>i</sub></code> is <code>Var(I<sub>i</sub>) = p(1-p) =(1/i)(1-1/i) = 1/i - 1/i<sup>2</sup></code>. Since <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent, and <code>X = sum(I<sub>i</sub>) i:1,...,n</code>:</br>
 <code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub><sup>(2)</sup></code>. Where <code>H<sub>n</sub><sup>(r)</sup></code> is a generalization of the harmonic number where <code>H<sub>n</sub><sup>(r)</sup> = sum(1/i<sup>r</sup>) i:1,...,n</code>.
 
-### Distribution
 Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality) and the fact that <code>Var(X) <= H<sub>n</sub></code>, `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:
 <code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/(a<sup>2</sup> H<sub>n</sub><sup>2</sup>) = 1/(a<sup>2</sup> H<sub>n</sub>)</code> which goes to zero as `n` goes to infifnity. Thus with high probaility, `|X-E[X]|>= aE[X]` and thus 
 <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code>.
+
+This gives that `X/E[X]` converges to 1 since as `n` approches inifinity, for every `a`, <code>Pr(|X/E[X]-1|>a)=0</code>. 
 
 ## Applications
 
