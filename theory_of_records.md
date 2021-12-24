@@ -56,7 +56,7 @@ This gives that `X/E[X]` converges to 1 since as `n` approaches infinity, for ev
 ## Applications
 
 The theory of records has proven to have many applications in probabilistic analysis. Some of these include:
-- Bounding the hight of random binary search trees [1]
+- Bounding the hight of random binary search trees 
 - Bounding the number of points on the convex hull of a set of random points in a sqaure
 - Analyzing the quicksort recursive tree
 
