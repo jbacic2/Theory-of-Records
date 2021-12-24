@@ -30,7 +30,7 @@ Thus <code>R<sub>1</sub>,R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually i
 Let the random variable `X` denote the number of records in the sequence <code>A<sub>1</sub>,..., A<sub>n</sub></code> and `E[X]` denote the expected value of `X`. 
 
 Define the indicator random variable <code>I<sub>i</sub></code>. To be 1 if <code>A<sub>i</sub></code> is a record and 0 otherwise. Then,
-<code>X = sum(I<sub>i</sub>) i:1, ..., n</code>
+<code>X = sum(I<sub>i</sub>) i:1, ..., n</code>.
 And thus, <br />
 <code>E[X] = E[sum(I<sub>i</sub>)] i:1, ..., n = sum(E[I<sub>i</sub>]) i:1, ..., n</code> by the linearity of expectation. 
 
