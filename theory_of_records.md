@@ -61,8 +61,8 @@ The theory of records has proven to have many applications in probabilistic anal
 - Analyzing the quicksort recursive tree
 
 ## References
-1. Devroye, Luc. "A note on the height of binary search trees." J. ACM 33, 3 (July 1986), p. 489–498, DOI:https://doi.org/10.1145/5925.5930
-2. Devroye, Luc. "Applications of the theory of records in the study of random trees." Acta Inf. 26, 1–2 (Oct. 1988), p. 123–130, DOI:https://doi.org/10.1007/BF02915448
+1. Devroye, Luc. "A note on the height of binary search trees." J. ACM, vol. 33, no. 3, July 1986, p. 489–498, DOI:https://doi.org/10.1145/5925.5930
+2. Devroye, Luc. "Applications of the theory of records in the study of random trees." Acta Inf. vol. 26, no. 1–2, Oct. 1988, p. 123–130, DOI:https://doi.org/10.1007/BF02915448
 3. Glick, Ned. “Breaking Records and Breaking Boards.” The American Mathematical Monthly, vol. 85, no. 1, Mathematical Association of America, 1978, p. 2–26, https://doi.org/10.2307/2978044.
 4. Rényi, Alfréd. “Théorie des éléments saillants d'une suite d'observations.” (1962).
 
