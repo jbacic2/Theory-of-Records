@@ -18,11 +18,11 @@ For each `i = 1,..., n`, the *local rank* <code>R<sub>i</sub></code> defined to 
 The *global rank* of <code>A<sub>i</sub></code> denoted <code>G<sub>i</sub></code> is the value such that <code>A<sub>i</sub></code> is the <code>G<sub>i</sub></code>th smallest value of the set <code>{A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub>}</code>. When using random variables with density functions, the probability that <code>A<sub>i</sub> = A<sub>j</sub></code> is 0 for `i` different from `j`. Thus, the global rank sequence, <code>G<sub>1</sub>,..., G<sub>n</sub></code>, is a permutation of `{1,..., n}`. Furthermore, since each <code>A<sub>i</sub></code> is chosen independently from the same distribution, each permutation is equally likely. Thus, the probability that the gobal rank sequence is a given permutation of `{1,...,n}` is `1/n!`. 
 
 The local rank sequence <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> uniquely determines the global rank sequence. Given the local ranks, one can determine the arrangement of <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code> in increasing order by starting with an empty sequence and repeatedly adding `i` at position <code>R<sub>i</sub></code> for `i = 1, ..., n`.
-The gobal rank <code>G<sub>i</sub></code> is determined by the index of `i` in the ordered sequence. This implies that given a tuple <code>(r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub>)</code> where <code>1 <= r<sub>i</sub> <= i</code>, <code>Pr(R<sub>1</sub> = r<sub>1</sub>,R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub>=r<sub>n</sub>)= 1/n!</code>.
+The gobal rank <code>G<sub>i</sub></code> is determined by the index of `i` in the ordered sequence. This implies that given a tuple <code>(r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub>)</code> where <code>1 <= r<sub>i</sub> <= i</code>, <code>Pr(R<sub>1</sub> = r<sub>1</sub>,R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub>=r<sub>n</sub>)= 1/n!</code>.\[4\]
 
-By summing over all cases where <code>R<sub>n</sub>=r<sub>n</sub></code>, <code>Pr(R<sub>n</sub> = r<sub>n</sub>) = 1/n</code> for <code>1<= r<sub>n</sub> <= n</code> for all `n = 1, 2, ...`.
+By summing over all cases where <code>R<sub>n</sub>=r<sub>n</sub></code>, <code>Pr(R<sub>n</sub> = r<sub>n</sub>) = 1/n</code> for <code>1<= r<sub>n</sub> <= n</code> for all `n = 1, 2, ...`.\[4\]
   
-The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>k</sub> <= n</code> where <code>k = 1, 2, ...</code>, and for <code>n = 1, 2, ...</code>.
+The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>k</sub> <= n</code> where <code>k = 1, 2, ...</code>, and for <code>n = 1, 2, ...</code>.\[4\]
 
 Thus <code>R<sub>1</sub>,R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independent. 
 
@@ -56,7 +56,7 @@ This gives that `X/E[X]` converges to 1 since as `n` approaches infinity, for ev
 ## Applications
 
 The theory of records has proven to have many applications in probabilistic analysis. Some of these include:
-- Bounding the hight of random binary search trees
+- Bounding the hight of random binary search trees \[1\]
 - Bounding the number of points on the convex hull of a set of random points in a sqaure
 - Analyzing the quicksort recursive tree
 
