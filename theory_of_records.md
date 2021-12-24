@@ -17,14 +17,14 @@ For each `i = 1,..., n`, the *local rank* <code>R<sub>i</sub></code> defined to 
 
 The *global rank* of <code>A<sub>i</sub></code> denoted <code>G<sub>i</sub></code> is the value such that <code>A<sub>i</sub></code> is the <code>G<sub>i</sub></code>th smallest value of the set <code>{A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub>}</code>. When using random variables with density functions, the probability that <code>A<sub>i</sub> = A<sub>j</sub></code> is 0 for `i` different from `j`. Thus, the global rank sequence, <code>G<sub>1</sub>,..., G<sub>n</sub></code>, is a permutation of `{1,..., n}`. Furthermore, since each <code>A<sub>i</sub></code> is chosen independently from the same distribution, each permutation is equally likely. Thus, the probability that the gobal rank sequence is a given permutation of `{1,...,n}` is `1/n!`. 
 
-The local rank sequence <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> uniquly determines the global rank sequence. Given the local ranks, one can determine the arrangment of <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code> in increasing order by starting with an empty sequence add repeatedly adding `i` at postion <code>R<sub>i</sub></code> for `i = 1, ..., n`.
+The local rank sequence <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> uniquely determines the global rank sequence. Given the local ranks, one can determine the arrangement of <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code> in increasing order by starting with an empty sequence and repeatedly adding `i` at position <code>R<sub>i</sub></code> for `i = 1, ..., n`.
 The gobal rank <code>G<sub>i</sub></code> is determined by the index of `i` in the ordered sequence. This implies that given a tuple <code>(r<sub>1</sub>, r<sub>2</sub>, ..., r<sub>n</sub>)</code> where <code>1 <= r<sub>i</sub> <= i</code>, <code>Pr(R<sub>1</sub> = r<sub>1</sub>,R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub>=r<sub>n</sub>)= 1/n!</code>.
 
 By summing over all cases where <code>R<sub>n</sub>=r<sub>n</sub></code>, <code>Pr(R<sub>n</sub> = r<sub>n</sub>) = 1/n</code> for <code>1<= r<sub>n</sub> <= n</code> for all `n = 1, 2, ...`.
   
-The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>n</sub> <= n</code> where <code>k=1,2,...</code>, and for <code>n = 1, 2, ...</code>
+The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>k</sub> <= n</code> where <code>k = 1, 2, ...</code>, and for <code>n = 1, 2, ...</code>.
 
-Thus <code>R<sub>1</sub>,R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independednt. 
+Thus <code>R<sub>1</sub>,R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independent. 
 
 ### Expected Number of Records
 Let the random variable `X` denote the number of records in the sequence <code>A<sub>1</sub>,..., A<sub>n</sub></code> and `E[X]` denote the expected value of `X`. 
@@ -41,19 +41,20 @@ Since <code>I<sub>i</sub> = 1</code> if and only if <code>R<sub>i</sub> = 1</cod
   
 So <code>E[X]= sum(E[I<sub>i</sub>]) i:1, ..., n = sum(1/i) i:1, ..., n = H<sub>n</sub></code> where <code>H<sub>n</sub></code> denotes the `n`th harmonic number. 
 
-### Varience 
-Consider the indicator random variable <code>I<sub>i</sub></code> as defined in the last section. The value of <code>I<sub>i</sub></code> is determined by the value of <code>R<sub>i</sub></code> for `i = 1, ..., n`. Since <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independednt, <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent. 
+### Variance 
+Consider the indicator random variable <code>I<sub>i</sub></code> as defined in the last section. The value of <code>I<sub>i</sub></code> is determined by the value of <code>R<sub>i</sub></code> for `i = 1, ..., n`. Since <code>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independent, <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mutually independent. 
 
 For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable which takes 1 with proability `p=1/i` and 0 with probaility `1-p=1=1/i`. Thus the variance of <code>I<sub>i</sub></code> is <code>Var(I<sub>i</sub>) = p(1-p) =(1/i)(1-1/i) = 1/i - 1/i<sup>2</sup></code>. Since <code>I<sub>1</sub>, I<sub>2</sub>, ..., I<sub>n</sub></code> are mututally independent, and <code>X = sum(I<sub>i</sub>) i:1,...,n</code>:</br>
 <code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub><sup>(2)</sup></code>. Where <code>H<sub>n</sub><sup>(r)</sup></code> is a generalization of the harmonic number where <code>H<sub>n</sub><sup>(r)</sup> = sum(1/i<sup>r</sup>) i:1,...,n</code>.
 
 Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality) and the fact that <code>Var(X) <= H<sub>n</sub></code>, `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:
-<code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/(a<sup>2</sup> H<sub>n</sub><sup>2</sup>) = 1/(a<sup>2</sup> H<sub>n</sub>)</code> which goes to zero as `n` goes to infifnity. Thus with high probaility, `|X-E[X]|>= aE[X]` and thus 
+<code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/(a<sup>2</sup> H<sub>n</sub><sup>2</sup>) = 1/(a<sup>2</sup> H<sub>n</sub>)</code> which goes to zero as `n` goes to infinity. Thus with high probability, `|X-E[X]|>= aE[X]` and thus 
 <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code>.
 
-This gives that `X/E[X]` converges to 1 since as `n` approches inifinity, for every `a`, <code>Pr(|X/E[X]-1|>a)=0</code>. 
+This gives that `X/E[X]` converges to 1 since as `n` approaches infinity, for every `a`, <code>Pr(|X/E[X]-1|>a)=0</code>. 
 
 ## Applications
 
 The theory of records has proven to have many applications in probabilistic analysis.
+
 
