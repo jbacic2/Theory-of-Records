@@ -22,7 +22,7 @@ The gobal rank <code>G<sub>i</sub></code> is determined by the index of `i` in t
 
 By summing over all cases where <code>R<sub>n</sub>=r<sub>n</sub></code>, <code>Pr(R<sub>n</sub> = r<sub>n</sub>) = 1/n</code> for <code>1<= r<sub>n</sub> <= n</code> for all `n = 1, 2, ...`.
   
-The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>n</sub></code>, <code>k=1,2,...</code>, and <code>n = 1, 2, ...</code>
+The previous two equations give:<code>Pr(R<sub>1</sub> = r<sub>1</sub>, R<sub>2</sub> = r<sub>2</sub>, ..., R<sub>n</sub> = r<sub>n</sub>) = Pr(R<sub>1</sub> = r<sub>1</sub>)\*Pr(R<sub>2</sub> = r<sub>2</sub>)\*...\*Pr(R<sub>n</sub> = r<sub>n</sub>)</code> for <code>1 <= r<sub>n</sub> <= n</code> where <code>k=1,2,...</code>, and for <code>n = 1, 2, ...</code>
 
 Thus <code>R<sub>1</sub>,R<sub>2</sub>, ..., R<sub>n</sub></code> are mutually independednt. 
 
