@@ -48,7 +48,7 @@ For `i=1, ..., n`, <code>I<sub>i</sub></code> is a Bernoulli random variable whi
 <code>Var(X) = Var(sum(I<sub>i</sub>) i:1,...,n) = sum(Var(I<sub>i</sub>)) i:1,...,n >= sum(1/i - 1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub> - sum(1/i<sup>2</sup>) i:1,...,n = H<sub>n</sub> - H<sub>n</sub><sup>(2)</sup></code>. Where <code>H<sub>n</sub><sup>(r)</sup></code> is a generalization of the harmonic number where <code>H<sub>n</sub><sup>(r)</sup> = sum(1/i<sup>r</sup>) i:1,...,n</code>.
 
 Using [Chebyshev's inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality) and the fact that <code>Var(X) <= H<sub>n</sub></code>, `X` can be bounded by <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code> with high probability. Chebyshev's inequality gives:
-<code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> = H<sub>n</sub>/(a<sup>2</sup> H<sub>n</sub><sup>2</sup>) = 1/(a<sup>2</sup> H<sub>n</sub>)</code> which goes to zero as `n` goes to infinity. Thus with high probability, `|X-E[X]|>= aE[X]` and thus 
+<code>P(|X-E[X]|>= aE[X]) <= Var(X)/(aE[X])<sup>2</sup> <= H<sub>n</sub>/(a<sup>2</sup> H<sub>n</sub><sup>2</sup>) = 1/(a<sup>2</sup> H<sub>n</sub>)</code> which goes to zero as `n` goes to infinity. Thus with high probability, `|X-E[X]|>= aE[X]` and thus 
 <code>(1-a)H<sub>n</sub> <= X <= (1+a)H<sub>n</sub></code>.
 
 This gives that `X/E[X]` converges to 1 since as `n` approaches infinity, for every `a`, <code>Pr(|X/E[X]-1|>a)=0</code>. 
