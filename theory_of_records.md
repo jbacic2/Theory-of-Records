@@ -10,7 +10,7 @@ Where the sequence comes from a permutation of `{1,...,n}` chosen uniformly at r
 The theory of records states that the expected number of records is the <code>n</code><sup>th</sup> [harmonic number](https://en.wikipedia.org/wiki/Harmonic_number), <code>H<sub>n</sub> = sum(1/i) i:1, ..., n</code>. 
 
 ## Formal Definition and Analysis 
-For a sequence of `n` independent and identically distributed random variables, with a given density <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code>. The value <code>A<sub>i</sub></code> is a minimum record if <code>A<sub>i</sub> < A<sub>j</sub></code> for all <code>j = 1,...,i-1</code>. 
+For a sequence of `n` independent and identically distributed random variables with a given density, <code>A<sub>1</sub>,A<sub>2</sub>,..., A<sub>n</sub></code>. The value <code>A<sub>i</sub></code> is a minimum record if <code>A<sub>i</sub> < A<sub>j</sub></code> for all <code>j = 1,...,i-1</code>. 
 
 ### Ranks 
 For each `i = 1, …, n`, the *local rank* <code>R<sub>i</sub></code> defined to be the value such that <code>A<sub>i</sub></code> is the <code>R<sub>i</sub></code>th smallest value of the set <code>{A<sub>1</sub>,A<sub>2</sub>,..., A<sub>i</sub>}</code>.  The value <code>A<sub>i</sub></code> is a record in the sequence <code>A<sub>1</sub>,..., A<sub>n</sub></code> if and only if <code>R<sub>i</sub> = 1</code>.
