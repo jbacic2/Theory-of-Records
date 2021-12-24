@@ -32,7 +32,7 @@ Let the random variable `X` denote the number of records in the sequence <code>A
 Define the indicator random variable <code>I<sub>i</sub></code>. To be 1 if <code>A<sub>i</sub></code> is a record and 0 otherwise. Then,
 <code>X = sum(I<sub>i</sub>) i:1, ..., n</code>.
 And thus, <br />
-<code>E[X] = E[sum(I<sub>i</sub>)] i:1, ..., n = sum(E[I<sub>i</sub>]) i:1, ..., n</code> by the linearity of expectation. 
+<code>E[X] = E[sum(I<sub>i</sub>) i:1, ..., n]= sum(E[I<sub>i</sub>]) i:1, ..., n</code> by the linearity of expectation. 
 
 Consider <code>E[I<sub>i</sub>]</code>.
 <code>E[I<sub>i</sub>] = 0\*Pr(I<sub>i</sub> = 0) + 1\*Pr(I<sub>i</sub> = 1) = Pr(I<sub>i</sub> = 1)</code>. 
